@@ -4,7 +4,9 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from wedding.forms import ContactForm
-
+from django.contrib.auth import authenticate, login
+from django.template import RequestContext
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -45,3 +47,4 @@ def email(request):
 
 def thanks(request):
     return HttpResponse('Thank you for your message.')
+

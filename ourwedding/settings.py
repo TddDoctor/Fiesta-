@@ -82,6 +82,8 @@ DATABASES = {
     }
 }
 
+LOGIN_REDIRECT_URL = '/admin/'
+LOGOUT_REDIRECT_URL = '/home/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
