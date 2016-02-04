@@ -43,9 +43,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="navigation">
 			 <span class="menu"></span> 
 				<ul class="navig">
-					<li><a href="index/">Home</a><span> </span></li>
+					<li><a href="../index/">Home</a><span> </span></li>
 					<li><a href="../about/">About</a><span> </span></li>
-					<li><a href="404.html">Services</a><span> </span></li>
+					<li><a href="../addphoto/"></a><span> </span></li>
 					<li><a href="../blog/">Blog</a><span> </span></li>
 					<li><a class="active" href="../gallery/">Gallery</a><span> </span></li>
 					<li><a href="../contact/">Contact</a><span> </span></li>
@@ -128,7 +128,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="gallery-bottom">
 				<ul id="og-grid" class="og-grid">
 					<li>
-						<a href="/templates/wedding/statisingle.html" data-largesrc="/static/images/1.jpg" data-title="Mauris accumsan" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+						<a href="../single/" data-largesrc="/static/images/1.jpg" data-title="Mauris accumsan" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
 							<img class="img-responsive" src="/static/images/thumbs/1.jpg" alt="img01"/>
 						</a>
 					</li>
@@ -147,6 +147,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<img class="img-responsive" src="/static/images/thumbs/4.jpg" alt="img01"/>
 						</a>
 					</li>
+
+   {% if documents %}
+                        <ul>
+                        
+                   {% for document in documents %}
+ <li><a href="" height="1">{{ document.name }}
+                        <img src="{{ document.docfile.url }}" alt="{{ document.docfile.name }}">
+
+                                </a></li>
+    <li><a href="{{ document. }}">{{ document.title }}</a></li>
+                        {% endfor %}
+                        </ul>
+                {% else %}
+                        <p>No documents.</p>
+                {% endif %}
+
+
+
 					<li>
 						<a href="single.html" data-largesrc="/static/images/5.jpg" data-title="Integer laoreet"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
 							<img class="img-responsive" src="/static/images/thumbs/5.jpg" alt="img01"/>
